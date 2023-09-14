@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+    <script src="script/script.js"></script>
+    <link rel="icon" src="img/logo-logspin-banner.png">
+    <title>LogSpin</title>
+  </head>
+  <body onload="stampa_siti()">
+    <div class="container-fluid">
+   <img id="logo" src="img/logo-logspin-banner.png">
+    <div class="button-sez row">
+      
+      
+      
+    </div> 
+    <h1>Clicca su i siti che vuoi aggiungere al hub rapidamente</h1>
+    <div class="button-sez row" id="sez-siti-head">
+      
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="facebook" onclick="aggiungi_sito_da_head('www.facebook.com');"><img class="logo-siti" src="img/facebook-logo.png"></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="twitter" onclick="aggiungi_sito_da_head('www.twitter.com')"><img class="logo-siti" src="img/Twitter_logo.svg.png"></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="youtube" onclick="aggiungi_sito_da_head('www.youtube.com');"><img class="logo-siti" src="img/YouTube_Logo_2017.svg.png"></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="linkedin" onclick="aggiungi_sito_da_head('it.linkedin.com');"><img class="logo-siti" src="img/LinkedIn_Logo_2019.png"></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="github" onclick="aggiungi_sito_da_head('github.com');"><img class="logo-siti" src="img/GitHub-Logo.png"></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="unistudium" onclick="aggiungi_sito_da_head('unistudium.unipg.it/unistudium/login/index.php');"><b>Unistudium</b></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="sol" onclick="aggiungi_sito_da_head('unipg.esse3.cineca.it/Home.do');"><b>SOL Unipg</b></button></span>
+      <span class="col-lg-3 col-sm-6"><button class="btn siti-head" id="adisu" onclick="aggiungi_sito_da_head('www.adisu.umbria.it/area-riservata-studenti');"><img class="logo-siti" src="img/logo-adisu.png"></button></span>
+    </div> 
+    <div id="add-new-site row">
+      <h1>Oppure inserisci un nuovo sito manualmente</h1>
+      <div class="form col-lg-5 col-sm-12 " id="form-agg-sito">
+        
+        <label class="col-lg-3">Url sito</label><input type="text" class="col-lg-9" id="url" name="url">
+        <label class="col-lg-3">Email</label><input type="text" class="col-lg-9" id="email" name="email">
+        <label class="col-lg-3">Password</label><input class="col-lg-9" type="password" id="psw" name="psw">
+        <label class="col-lg-3">Timer</label><select class="col-lg-9" id="timer">
+          <option value=""> Mai </option>
+          <option value="30000"> 30 secondi (solo per test) </option>
+          <option value="1800000"> 30 minuti </option>
+          <option value="3600000"> 1 ora </option>
+          <option value="10800000"> 3 ore</option>
+          <option value="21600000"> 6 ore</option>
+          <option value="43200000"> 12 ore </option>
+          <option value="86400000"> 24 ore </option>
+        </select><br>
+        <button class="btn" onclick="aggiungi_sito()">Aggiungi sito</button>
+      
+      </div>
+    </div>  
+    <span><h1>HUB SITI</h1></span>
+    <div id="btn-sez">
+      
+      <span class="col-lg-3"><button class="btn" onclick="clear_localStorage()">Resetta l'intera applicazione</button></span>
+      
+    </div>
+    <div id="hub-sites" class="row">
+    <!-- spazio per la stampa dei siti aggiunti -->
+     
+      
+    </div>
+
+  </div>
+  <footer class="footer">
+    <p><b>LogSpin - Costantini Samuele - Universita' degli Studi di Perugia (UNIPG) - A.A. 2021/2022</b></p>
+  </footer>
+  </body>
+</html>
